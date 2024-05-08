@@ -1,0 +1,104 @@
+<!-- Main content structure for teaching JavaScript jquery -->
+<!-- This HTML page provides an introduction to jQuery, discussing how it 
+    simplifies HTML DOM tree traversal, event handling, and animation. It includes practical 
+    examples of jQuery functions like fadeIn, fadeOut, and AJAX to enhance web interactivity. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Basics</title>
+<link rel="stylesheet" href="../css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header section includes the navigation bar and the title of the page -->
+<header>
+  <h1>jQuery Basics</h1>
+  <!-- NavBar to different pages-->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="conditionals.html">Conditional Statements</a></li>
+      <li><a href="loops.html">Loops</a></li>
+      <li><a href="arrays.html">Arrays</a></li>
+      <li><a href="functions.html">Functions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li class="active"><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <!-- Introduction to jQuery, explaining its benefits and uses -->
+    <h2>Understanding jQuery</h2>
+    <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, 
+        event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. 
+        With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+    <p>Here's how you can start working with jQuery in your web projects:</p>
+    <h3>Adding jQuery to Your Site</h3>
+    <p>First, you need to include jQuery in your website. You can download it or include it directly from a CDN (Content Delivery Network):</p>
+    <pre><code>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></pre>
+    <h3>Document Ready Event</h3>
+    <p>To ensure that your code only runs after the HTML document is ready to be manipulated, use the jQuery document ready event:</p>
+    <pre><code>$(document).ready(function() {
+        console.log('The document is ready!');
+    });</code></pre>
+    <h3>Selecting Elements</h3>
+    <p>jQuery simplifies the process of selecting DOM elements. Here`s how you select all <code>&lt;p&gt;</code> elements and apply a function:</p>
+    <pre><code>$('p').click(function() {
+        alert('Paragraph clicked!');
+    });</code></pre>
+    <h3>Animating Elements</h3>
+    <p>jQuery makes it easy to animate elements in your web page. Here's an example of fading out a div:</p>
+    <pre><code>$('#myDiv').fadeOut('slow');</code></pre>
+    <h3>AJAX with jQuery</h3>
+    <p>jQuery provides powerful tools for performing AJAX calls, allowing you to load data asynchronously without refreshing the page:</p>
+    <pre><code>$.ajax({
+        url: 'example.json',
+        success: function(data) {
+            console.log('Data loaded: ', data);
+        }
+    });</code></pre>
+    <p>jQuery's simplicity and power have made it one of the most popular JavaScript libraries in use today. Understanding how to use 
+        jQuery effectively can significantly enhance your ability to quickly develop and deploy interactive web pages.</p>    
+  </section>
+    <!-- Interactive section to practice jQuery commands on the page -->
+  <section id="jquerySection">
+    <h2>Try it Yourself</h2>
+    <p>Click the buttons to interact with the text below:</p>
+    <button id="hideButton">Hide Text</button>
+    <button id="showButton">Show Text</button>
+    <button id="toggleTextButton">Toggle Text</button>
+    <button id="changeTextButton">Change Text</button>
+    <div id="textDisplay">Hello, jQuery world!</div>
+  </section>
+    <!-- Quiz section to test the user's understanding of jQuery methods -->
+  <div class="quiz-container">
+    <h2>Test Your Knowledge: jQuery</h2>
+    <div id="question-container">
+        <p id="question">Which jQuery method is used to hide an element?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">.remove()</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">.show()</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">.hide()</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('jquery')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+</main>
+<footer>
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <!-- Footer with copyright notice and a back-to-top javascript function button for convenience -->
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

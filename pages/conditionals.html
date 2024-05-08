@@ -1,0 +1,146 @@
+<!-- Main content structure for teaching JavaScript Conditional Statements -->
+<!-- This HTML page is focused on JavaScript Conditional Statements. 
+    It explains different types of conditionals like if, else, and switch, 
+    providing examples to demonstrate how these can control the flow of 
+    execution in JavaScript code. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Conditional Statements</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>JavaScript Conditional Statements</h1>
+  <nav>
+    <!-- NavBar for different pages-->
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li class="active"><a href="conditionals.html">Conditional Statements</a></li>
+        <li><a href="loops.html">Loops</a></li>
+        <li><a href="arrays.html">Arrays</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Understanding Conditional Statements</h2>
+    <p>Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run. 
+        They are essential for making decisions in your code based on different conditions.</p>
+    <p>In JavaScript, the most commonly used conditional statements include:</p>
+    <ul class="resource-list">
+         <!-- Examples of conditional statements -->
+        <li><code>if</code>: Executes a block of code if a specified condition is true.</li>
+        <li><code>else</code>: Executes a block of code if the same condition is false.</li>
+        <li><code>else if</code>: Specifies a new condition to test, if the first condition is false.</li>
+        <li><code>switch</code>: Specifies many alternative blocks of code to be executed.</li>
+    </ul>
+    <p>These structures allow you to perform different actions for different decisions. JavaScript evaluates the 
+        condition and executes the corresponding block of code when the condition is true. If no conditions are true, 
+        JavaScript can execute an <code>else</code> block of code, providing a default action.</p>
+        <h2>Practical Examples</h2>
+        <h3>Using if</h3>
+        <p>This example uses an <code>if</code> statement to check if a score is above 70. If the condition is true, it prints 
+            'Passing grade' to the console:</p>
+        <pre><code>let score = 75;
+        if (score &gt; 70) {
+            console.log('Passing grade');
+        }</code></pre>
+        
+        <h3>Using else</h3>
+        <p>Here, an <code>if</code> statement checks if the temperature is greater than 25 degrees. If not, 
+            the <code>else</code> part executes, printing 'It's cool outside':</p>
+        <pre><code>let temperature = 20;
+        if (temperature &gt; 25) {
+            console.log('It\'s warm outside');
+        } else {
+            console.log('It\'s cool outside');
+        }</code></pre>
+        
+        <h3>Using else if</h3>
+        <p>This example demonstrates a chain of decisions starting with an <code>if</code> condition, followed by 
+            an <code>else if</code>, and ending with an <code>else</code>. It checks the time of day and greets accordingly:</p>
+        <pre><code>let hours = 12;
+        if (hours &lt; 12) {
+            console.log('Good morning');
+        } else if (hours &lt; 18) {
+            console.log('Good afternoon');
+        } else {
+            console.log('Good evening');
+        }</code></pre>
+        <!-- Switch case which uses javascript to switch through the correct and wrong answers clicked by the user-->
+        <h3>Using switch</h3>
+        <p>The <code>switch</code> statement is used for more complex decision structures and is particularly useful when 
+            there are many cases to consider. This example uses <code>switch</code> to print the day of the week based on the numeric day:</p>
+        <pre><code>let day = 3;
+        switch (day) {
+            case 1:
+                console.log('Monday');
+                break;
+            case 2:
+                console.log('Tuesday');
+                break;
+            case 3:
+                console.log('Wednesday');
+                break;
+            case 4:
+                console.log('Thursday');
+                break;
+            case 5:
+                console.log('Friday');
+                break;
+            case 6:
+                console.log('Saturday');
+                break;
+            case 7:
+                console.log('Sunday');
+                break;
+            default:
+                console.log('Invalid day');
+        }</code></pre>
+        
+    <p>These examples demonstrate how conditional statements are used to make decisions in JavaScript, helping your program respond dynamically to different conditions and inputs.</p>
+  </section>
+  <section>
+    <h2>Try it Yourself</h2>
+    <p>Enter a number to check if it's positive, negative, or zero:</p>
+    <input type="number" id="numberInput" placeholder="Enter a number...">
+    <button id="checkNumberButton">Check Number</button>
+    <p id="numberOutput"></p>
+  </section>
+  <!-- Quiz with a onlick javascrtipt funtion-->
+  <div class="quiz-container">
+    <h2>Test Your Knowledge: JavaScript Conditional Statements</h2>
+    <div id="question-container">
+        <!-- Quiz to reinforce learning about conditional statements -->
+        <p id="question">Which statement is used to execute some code if 'i' is NOT equal to 5?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">if (i = 5)</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">if (i != 5)</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">if (i == 5)</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('conditions')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+</main>
+<footer>
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <!-- Back to the top with a onlick javascript funtion-->
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

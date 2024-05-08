@@ -1,0 +1,102 @@
+<!-- Main content structure for teaching JavaScript funtions -->
+<!-- This HTML page explores JavaScript Functions, detailing how to define and 
+    use functions to organize code into reusable blocks. It covers different 
+    ways to declare functions, including function expressions and ES6 arrow functions. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Functions</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>JavaScript Functions</h1>
+  <nav>
+    <!-- NavBar for other pages-->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="conditionals.html">Conditional Statements</a></li>
+      <li><a href="loops.html">Loops</a></li>
+      <li><a href="arrays.html">Arrays</a></li>
+      <li class="active"><a href="functions.html">Functions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <!-- used <code> so the user can identify the key words easier from the rest of the content -->
+    <h2>Understanding Functions</h2>
+    <p>Functions in JavaScript are blocks of code designed to perform a particular task. They are fundamental to writing clean, 
+        maintainable, and reusable code. A function is executed when it is called (or invoked), rather than when the script is loaded.</p>
+    <p>Functions can take parameters, which are used to pass data into the function, and they can return a value. In JavaScript, 
+        functions can be defined in several ways, including function declarations, function expressions, and arrow functions introduced in ES6.</p>
+    <h3>Defining a Function</h3>
+    <pre><code>function sayHello() {
+        console.log('Hello!');
+    }</code></pre>
+    <h3>Calling a Function</h3>
+    <p>To call (or invoke) a function, you use the function name followed by parentheses:</p>
+    <pre><code>sayHello(); // Outputs: Hello!</code></pre>
+    <h3>Function with Parameters</h3>
+    <p>Functions can also take parameters, which allow you to pass information to the function:</p>
+    <pre><code>function greet(name) {
+        console.log('Hello ' + name + '!');
+    }</code></pre>
+    <p>Calling the function with a parameter:</p>
+    <pre><code>greet('Alice'); // Outputs: Hello Alice!</code></pre>
+    <h3>Function that Returns a Value</h3>
+    <p>A function can return a value that can be used in other parts of your code:</p>
+    <pre><code>function add(a, b) {
+        return a + b;
+    }
+    console.log(add(5, 3)); // Outputs: 8</code></pre>
+    <h3>Arrow Functions</h3>
+    <p>With ES6, JavaScript introduced arrow functions, a concise way to write functions. Here's how you write an arrow function 
+        equivalent to the add function:</p>
+    <pre><code>const add = (a, b) => a + b;
+    console.log(add(10, 5)); // Outputs: 15</code></pre>
+    <p>Understanding how to define and use functions is crucial for JavaScript programming, as it helps to structure your code 
+        more effectively, making it easier to debug and maintain.</p>    
+  </section>
+  <section id="functionsSection">
+    <h2>Try it Yourself</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button id="addButton">Add</button>
+    <button id="multiplyButton">Multiply</button>
+    <p id="functionResult">Result: </p>
+  </section>
+  <div class="quiz-container">
+    <h2>Test Your Knowledge: JavaScript Functions</h2>
+    <div id="question-container">
+        <!-- Quiz with a onlick javascrtipt funtion-->
+        <p id="question">What does a function in JavaScript typically use to receive input?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">Parameters</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">Loops</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">Conditionals</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('functions')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+</main>
+<footer>
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <!-- back to top button with a onlick javascrtipt funtion-->
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

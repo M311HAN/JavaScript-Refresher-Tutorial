@@ -1,0 +1,101 @@
+<!-- This HTML page focuses on JavaScript Maps. It explains how to use the Map object to store unique 
+    key-value pairs, demonstrates methods for manipulation, and illustrates the importance of 
+    choosing Maps over Objects for certain applications. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Maps</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>JavaScript Maps</h1>
+  <nav>
+    <!-- NavBar to different pages-->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="conditionals.html">Conditional Statements</a></li>
+      <li><a href="loops.html">Loops</a></li>
+      <li><a href="arrays.html">Arrays</a></li>
+      <li><a href="functions.html">Functions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li class="active"><a href="maps.html">Maps</a></li>
+      <li><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <!-- Teaching of maps in this section with exampls of code-->
+    <h2>Understanding Maps</h2>
+    <p>The JavaScript <code>Map</code> object is a collection of key-value pairs where each key is unique and mapped to a value. 
+        Unlike objects, keys in a <code>Map</code> can be of any type, even functions, objects, or any primitive. 
+        Maps remember the original insertion order of the keys, making them particularly useful when the order of elements is important.</p>
+    <p>Here's how you can work with Maps in JavaScript:</p>
+    <h3>Creating a Map</h3>
+    <pre><code>const myMap = new Map();
+    myMap.set('key1', 'value1');
+    myMap.set('key2', 'value2');</code></pre>
+    <h3>Accessing Values</h3>
+    <p>To access values in a Map, use the <code>get</code> method:</p>
+    <pre><code>console.log(myMap.get('key1')); // Outputs: 'value1'</code></pre>
+    <h3>Checking for a Key</h3>
+    <p>Check if a key exists in a Map with the <code>has</code> method:</p>
+    <pre><code>console.log(myMap.has('key2')); // Outputs: true</code></pre>
+    <h3>Iterating Over a Map</h3>
+    <p>You can iterate over the keys and values in a Map using a <code>for...of</code> loop:</p>
+    <pre><code>for (let [key, value] of myMap) {
+        console.log(key + ': ' + value);
+    }</code></pre>
+    <h3>Map Size and Deletion</h3>
+    <p>To find out the number of key-value pairs in a Map, use the <code>size</code> property. To delete a key from a Map, 
+        use the <code>delete</code> method:</p>
+    <pre><code>console.log(myMap.size); // Outputs: 2
+    myMap.delete('key1');
+    console.log(myMap.size); // Outputs: 1</code></pre>
+    <p>Maps are highly beneficial for scenarios where key integrity is important, and you need to maintain an orderly collection that 
+        does not coerce the keys to strings, as standard JavaScript objects do.</p>
+  </section>
+  <section id="mapsSection">
+     <!-- Interactive example for practicing loop concepts -->
+    <h2>Try it Yourself</h2>
+    <div>
+      <input type="text" id="userIdInput" placeholder="Enter user ID">
+      <input type="text" id="userNameInput" placeholder="Enter user name">
+      <button id="addUserButton">Add User</button>
+      <button id="getUserButton">Get User</button>
+      <button id="removeUserButton">Remove User</button>
+    </div>
+    <p id="mapOutput"></p>
+  </section>
+  <!-- Quiz section to test understanding of map concepts that uses javascript onclick function -->
+  <div class="quiz-container">
+    <h2>Test Your Knowledge: JavaScript Maps</h2>
+    <div id="question-container">
+        <p id="question">Which method is used to get a value from a Map using a key?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">setValue()</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">get()</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">push()</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('maps')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+
+</main>
+<footer>
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <!-- Footer containing copyright information and a practical back-to-top button that uses a javascript onclick funtion -->
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

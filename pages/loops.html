@@ -1,0 +1,107 @@
+<!-- Main content structure for teaching JavaScript loops -->
+<!-- This HTML page is dedicated to JavaScript Loops. It covers various types of loops 
+    (for, while, do-while) and demonstrates their practical applications to perform 
+    repetitive tasks efficiently in JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Loops</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header with navigation menu linking to various JavaScript topics -->
+<header>
+  <h1>JavaScript Loops</h1>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="conditionals.html">Conditional Statements</a></li>
+      <li class="active"><a href="loops.html">Loops</a></li>
+      <li><a href="arrays.html">Arrays</a></li>
+      <li><a href="functions.html">Functions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <!-- Introduction to the different types of loops in JavaScript -->
+  <section>
+    <h2>Understanding Loops</h2>
+    <p>Loops are fundamental in JavaScript for executing a block of code multiple times. They are particularly 
+        useful when you need to perform repetitive tasks efficiently.</p>
+    <p>JavaScript supports several types of loops, each with its specific use case:</p>
+    <ul class="resource-list">
+        <li><code>for</code> loop: Is ideal for when the number of iterations is known before the loop starts. 
+            Syntax: <code>for (initialization; condition; increment) { /* code */ }</code></li>
+        <li><code>while</code> loop: Is Best used when the number of iterations is not known and the loop needs 
+            to continue until a certain condition changes. Syntax: <code>while (condition) { /* code */ }</code></li>
+        <li><code>do-while</code> loop: Is Similar to the while loop, but it runs at least once because the 
+            condition is checked after the loop's body. Syntax: <code>do { /* code */ } while (condition);</code></li>
+    </ul>
+    <!-- Example demonstrating simple loops in action-->
+    <p>Choosing the right loop can make your code more efficient and easier to understand. Here are simple examples 
+        to illustrate how each loop works:</p>
+    <h3>For Loop Example</h3>
+    <p>This example uses a <code>for</code> loop to print numbers from 0 to 4. The loop initializes a counter at 0, 
+        continues until the counter is less than 5, and increments the counter by 1 in each iteration:</p>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+        console.log(i);
+    }</code></pre>
+    <h3>While Loop Example</h3>
+    <p>This <code>while</code> loop example shows how to execute a block of code as long as a certain condition remains true. 
+        Here, the loop starts with a counter at 0 and runs until the counter reaches 5, printing each value:</p>
+    <pre><code>let i = 0;
+    while (i &lt; 5) {
+        console.log(i);
+        i++;
+    }</code></pre>
+    <h3>Do-While Loop Example</h3>
+    <p>The <code>do-while</code> loop is useful for cases where the loop must execute at least once regardless of the 
+        condition at the start. This example prints the initial value of the counter and then checks if it should continue:</p>
+    <pre><code>let i = 0;
+    do {
+        console.log(i);
+        i++;
+    } while (i &lt; 5);</code></pre>
+    <p>Each type of loop offers different advantages depending on your specific programming needs. Understanding these 
+        differences is key to leveraging loops effectively in your JavaScript code.</p>    
+  </section>
+  <section>
+    <!-- Interactive example for practicing loop concepts -->
+    <h2>Try it Yourself</h2>
+    <p>Toggle the list of numbers from 1 to 10 and their squares:</p>
+    <button id="showSquaresButton">Toggle Squares</button>
+    <ul id="squaresList"></ul>
+  </section>
+  <div class="quiz-container">
+      <!-- Quiz section to test understanding of loop concepts that uses javascript onclick function -->
+    <h2>Test Your Knowledge: JavaScript Loops</h2>
+    <div id="question-container">
+        <p id="question">What does a 'for' loop in JavaScript typically require?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">An event listener</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">A callback function</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">Initialization, condition, increment</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('loops')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+</main>
+<footer>
+<!-- Footer containing copyright information and a practical back-to-top button that uses a javascript onclick funtion -->
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

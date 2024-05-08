@@ -1,0 +1,103 @@
+<!-- Home page (index.html) also known as the landing -->
+<!-- This HTML page serves as the home page for a JavaScript Tutorial series. 
+    It provides an overview of all available topics like Variables, Loops, 
+    Functions, and more, encouraging interactive learning and offering resources 
+    for further exploration in JavaScript. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+    <header>
+      <!-- Header with navigation menu linking to various JavaScript topics -->
+      <h1>Welcome to the JavaScript Refresher Tutorial</h1>
+      <nav>
+        <!-- NavBar for different pages-->
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="pages/variables.html">Variables</a></li>
+          <li><a href="pages/conditionals.html">Conditional Statements</a></li>
+          <li><a href="pages/loops.html">Loops</a></li>
+          <li><a href="pages/arrays.html">Arrays</a></li>
+          <li><a href="pages/functions.html">Functions</a></li>
+          <li><a href="pages/events.html">Events</a></li>
+          <li><a href="pages/maps.html">Maps</a></li>
+          <li><a href="pages/jquery.html">jQuery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+            <!-- Introduction to the JavaScript Refresher Course -->
+        <img src="images/javascriptbanner.png" alt="JavaScript Logo" class="header-image">
+        <div class="home-intro">
+            <h2>Welcome to Our Learning Platform!</h2>
+            <p>Explore a wide range of topics on JavaScript, jQuery, and more. Each module comes with a fun quiz to test your knowledge and reinforce learning. Dive into the lessons and challenge yourself with the quizzes to see how much you've learned!</p>
+            <p>Ready to start? Choose a topic below and let's make learning exciting!</p>
+        </div>
+        <h2>Introduction</h2>
+        <p>Remember that time you tried coding in JavaScript and ended up with a website that resembled a disco ball on acid? Fear not, fellow coder! This refresher course is your one-stop shop to brush up on those essential JavaScript skills and transform your code from "Yikes!" to "Yowza!"</p>
+      </section>
+      <section>
+           <!-- Overview of course modules with links to detailed lessons -->
+        <h2>Course Modules</h2>
+        <ul class="resource-list">
+          <li><a href="variables.html"><strong>Variables:</strong></a> Learn how to declare, assign, and use variables in JavaScript for storing data values.</li>
+          <li><a href="conditionals.html"><strong>Conditional Statements:</strong></a> Understand how to make decisions in your code using conditions to execute different actions based on different inputs.</li>
+          <li><a href="loops.html"><strong>Loops:</strong></a> Discover how to efficiently repeat actions using various loops such as for, while, and do-while loops.</li>
+          <li><a href="arrays.html"><strong>Arrays:</strong></a> Explore how to store multiple values in a single variable with JavaScript arrays and manipulate them with array methods.</li>
+          <li><a href="functions.html"><strong>Functions:</strong></a> Master the art of grouping code into blocks that can be reused with functions, enhancing the modularity and scalability of your code.</li>
+          <li><a href="events.html"><strong>Events:</strong></a> Dive into how to make your web pages interactive by responding to events like clicks, keyboard presses, and more.</li>
+          <li><a href="maps.html"><strong>Maps:</strong></a> Learn about the Map object that holds key-value pairs and remembers the original insertion order of the keys.</li>
+          <li><a href="jquery.html"><strong>jQuery:</strong></a> Get introduced to jQuery, a fast, small, and feature-rich JavaScript library that simplifies HTML document traversing, event handling, and Ajax interactions.</li>
+        </ul>
+      </section>
+          <!-- Additional resources and books for further learning -->
+      <section>
+        <h2>Further Learning Resources</h2>
+        <h3>Enhance your JavaScript knowledge with these curated resources and Books:</h3>
+        <ul class="resource-list">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">💻 MDN Web Docs on JavaScript</a> - Comprehensive and authoritative source of web technology documentation, including JavaScript.</li>
+          <li><a href="https://javascript.info" target="_blank">💻 The Modern JavaScript Tutorial</a> - Explains JavaScript from the basics to advanced topics with simple, but detailed explanations.</li>
+          <li><a href="https://xiaoguo.net/~books/Program/You_Dont_Know_JS_Up_and_Going.pdf" target="_blank">📚 Up & Going By Kyle Simpson</a> - A free PDF book series on JavaScript to get you kickstarted into the wonderful world of Javascript.</li>
+          <li><a href="https://exploringjs.com/impatient-js/downloads/impatient-js-preview-book.pdf" target="_blank">📚 JavaScript for impatient programmers (ES2022 edition) By Dr. Axel Rauschmayer</a> - This book makes JavaScript less challenging to learn for newcomers, by offering a modern view that is as consistent as possible.</li>
+        </ul>
+      </section>
+          <!-- Subscription form section for users to join the community and receive updates -->
+      <section>
+        <h2>Join Our Community!</h2>
+        <form action="submit_form.php" method="POST">
+            <!-- Input field for user email with submission button -->
+          <input class="subscribe-input" type="email" id="subscribe-email" name="email" placeholder="Enter email for updates:" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+        <!-- Contact form section for users to send feedback or inquiries -->
+      <section>
+        <h2>Get in Touch!</h2>
+              <!-- Input fields for user's name, email, and a text area for messages -->
+        <form action="send_message.php" method="POST">
+          <input class="feedback-input" type="text" id="name" name="name" placeholder="Name" required>
+          <input class="feedback-input" type="email" id="contact-email" name="email" placeholder="Email" required>
+          <textarea class="feedback-input" id="message" name="message" placeholder="Questions or feedback? Let us know here!" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+      <!-- back to top button with a onclick JavaScript function-->
+      <div class="back-to-top">
+        <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    </body>
+    </html>
+

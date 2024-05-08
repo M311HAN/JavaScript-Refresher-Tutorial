@@ -1,0 +1,99 @@
+<!-- Main content section explaining and demonstrating JavaScript arrays -->
+<!-- This HTML page focuses on JavaScript Arrays. It introduces the concept of arrays, 
+    discusses how to manipulate them using methods like push, pop, and others, 
+    and shows how they can be used to store multiple values within a single variable efficiently. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Arrays</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>JavaScript Arrays</h1>
+  <nav>
+    <!-- NavBar for different pages-->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="conditionals.html">Conditional Statements</a></li>
+      <li><a href="loops.html">Loops</a></li>
+      <li class="active"><a href="arrays.html">Arrays</a></li>
+      <li><a href="functions.html">Functions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="jquery.html">jQuery</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Understanding Arrays</h2>
+    <p>Arrays in JavaScript are used to store multiple values in a single variable. They are one of the most 
+        useful and versatile data structures available, ideal for storing and manipulating collections of data such 
+        as lists of names, scores, or any items that can be quantified or grouped together.</p>
+    <p>An array can contain elements of any type, including numbers, strings, and even other arrays. The elements in 
+        an array are indexed, which means each item has a numbered position you can reference to access it directly.</p>
+    <!-- Examples of array operations -->
+    <h3>Creating an Array</h3>
+    <pre><code>const fruits = ['Apple', 'Banana', 'Cherry'];</code></pre>
+    <!-- More array operations explained -->
+    <h3>Accessing Array Elements</h3>
+    <p>To access an element in an array, you use the index number:</p>
+    <pre><code>console.log(fruits[1]); // Outputs: Banana</code></pre>
+    <h3>Adding Elements to an Array</h3>
+    <p>You can add elements to the end of an array using the push method:</p>
+    <pre><code>fruits.push('Orange');
+    console.log(fruits); // Outputs: ['Apple', 'Banana', 'Cherry', 'Orange']</code></pre>
+    <h3>Removing Elements from an Array</h3>
+    <p>Elements can be removed from an array using the pop method, which removes the last item:</p>
+    <pre><code>fruits.pop();
+    console.log(fruits); // Outputs: ['Apple', 'Banana', 'Cherry']</code></pre>
+    <h3>Looping Through Arrays</h3>
+    <p>To perform operations on each item in an array, you can use a loop:</p>
+    <pre><code>for (let i = 0; i &lt; fruits.length; i++) {
+        console.log(fruits[i]);
+    }</code></pre>
+    <p>Arrays also support a variety of other methods like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> that 
+        allow for more complex manipulations based on your needs.</p>
+    <p>Understanding how to effectively use arrays in JavaScript can significantly enhance your ability to handle data in your applications.</p>
+  </section>
+  <section id="arraySection">
+     <!-- Interactive array manipulation tools -->
+    <h2>Try it Yourself</h2>
+    <p>Current Array: <span id="arrayDisplay">[]</span></p>
+    <input type="text" id="arrayInput" placeholder="Enter a value">
+    <button id="arrayAddButton">Add to Array</button>
+    <button id="arrayRemoveButton">Remove Last</button>
+  </section>
+  <!-- Quiz with a onlick javascrtipt funtion-->
+  <div class="quiz-container">
+    <h2>Test Your Knowledge: JavaScript Arrays</h2>
+    <div id="question-container">
+        <p id="question">What method adds an element to the end of an array?</p>
+        <ul>
+            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">push()</label></li>
+            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">unshift()</label></li>
+            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">pop()</label></li>
+        </ul>
+    </div>
+    <button onclick="checkAnswer('arrays')">Submit Answer</button>
+    <p id="quiz-result"></p>
+</div>
+
+</main>
+<footer>
+  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+  <!-- Back to the top with a onlick javascript funtion-->
+  <div class="back-to-top">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="../js/scripts.js"></script>
+</body>
+</html>
