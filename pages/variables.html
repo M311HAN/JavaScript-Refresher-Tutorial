@@ -5,107 +5,155 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JavaScript Variables</title>
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-<header>
-  <h1>JavaScript Variables</h1>
-  <nav>
-    <!-- NavBar for other pages-->
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li class="active"><a href="variables.html">Variables</a></li>
-      <li><a href="conditionals.html">Conditional Statements</a></li>
-      <li><a href="loops.html">Loops</a></li>
-      <li><a href="arrays.html">Arrays</a></li>
-      <li><a href="functions.html">Functions</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="maps.html">Maps</a></li>
-      <li><a href="jquery.html">jQuery</a></li>
-    </ul>    
-  </nav>
-</header>
-<main>
-    <!-- Teaching of variables in this section also showing code examples so user can have a better understanding -->
-  <section>
-    <h2>What is a Variable?</h2>
-    <p>In JavaScript, a variable is a container for storing data values. Variables allow programmers 
-        to label data with a descriptive name, so the program can be understood more clearly by the 
-        reader and maintained more easily. JavaScript uses the 
-        keywords <code>var</code>, <code>let</code>, and <code>const</code> for variable declarations, 
-        each serving different purposes and scopes.</p>
-    <ul class="resource-list">
-        <li><code>var</code> declares a variable optionally initializing it to a value. Variables declared 
-            with <code>var</code> are scoped to the function within which they are declared, or globally if 
-            declared outside any function. <code>var</code> variables can be re-declared and updated.</li>
-        <li><code>let</code> allows you to declare variables that are limited in scope to the block, statement, 
-            or expression in which they are used. This is unlike the <code>var</code> keyword, which defines a 
-            variable globally, or locally to an entire function regardless of block scope. Variables declared 
-            with <code>let</code> can be updated but not re-declared within the same scope.</li>
-        <li><code>const</code> is used to declare variables whose values are never intended to change. <code>const</code> 
-            declarations share some similarities with <code>let</code> declarations in that the variable is blocked-scoped. 
-            However, a variable declared with <code>const</code> must be initialized at the time of declaration, and its value 
-            cannot be re-assigned.</li>
-    </ul>
-    <p>These distinctions are crucial for writing clear, effective code and understanding how variables behave differently 
-        depending on their declaration context in JavaScript. Understanding the scope and mutability of variables declared 
-        with <code>var</code>, <code>let</code>, and <code>const</code> can help prevent bugs and aid in maintaining code.</p>
-    <h3>Practical Examples</h3>
-    <h3>Using var</h3>
-    <pre><code>var greeting = 'Hello World!';
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Variables</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Variables</h1>
+      <nav>
+        <!-- NavBar for other pages-->
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a href="variables.html">Variables</a></li>
+          <li><a href="conditionals.html">Conditional Statements</a></li>
+          <li><a href="loops.html">Loops</a></li>
+          <li><a href="arrays.html">Arrays</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="jquery.html">jQuery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Teaching of variables in this section also showing code examples so user can have a better understanding -->
+      <section>
+        <h2>What is a Variable?</h2>
+        <p>
+          In JavaScript, a variable is a container for storing data values.
+          Variables allow programmers to label data with a descriptive name, so
+          the program can be understood more clearly by the reader and
+          maintained more easily. JavaScript uses the keywords <code>var</code>,
+          <code>let</code>, and <code>const</code> for variable declarations,
+          each serving different purposes and scopes.
+        </p>
+        <ul class="resource-list">
+          <li>
+            <code>var</code> declares a variable optionally initializing it to a
+            value. Variables declared with <code>var</code> are scoped to the
+            function within which they are declared, or globally if declared
+            outside any function. <code>var</code> variables can be re-declared
+            and updated.
+          </li>
+          <li>
+            <code>let</code> allows you to declare variables that are limited in
+            scope to the block, statement, or expression in which they are used.
+            This is unlike the <code>var</code> keyword, which defines a
+            variable globally, or locally to an entire function regardless of
+            block scope. Variables declared with <code>let</code> can be updated
+            but not re-declared within the same scope.
+          </li>
+          <li>
+            <code>const</code> is used to declare variables whose values are
+            never intended to change. <code>const</code> declarations share some
+            similarities with <code>let</code> declarations in that the variable
+            is blocked-scoped. However, a variable declared with
+            <code>const</code> must be initialized at the time of declaration,
+            and its value cannot be re-assigned.
+          </li>
+        </ul>
+        <p>
+          These distinctions are crucial for writing clear, effective code and
+          understanding how variables behave differently depending on their
+          declaration context in JavaScript. Understanding the scope and
+          mutability of variables declared with <code>var</code>,
+          <code>let</code>, and <code>const</code> can help prevent bugs and aid
+          in maintaining code.
+        </p>
+        <h3>Practical Examples</h3>
+        <h3>Using var</h3>
+        <pre><code>var greeting = 'Hello World!';
     console.log(greeting); // Outputs: Hello World!
     // Re-declaring and updating var
     var greeting = 'Hello again!';
     console.log(greeting); // Outputs: Hello again!</code></pre>
-    <h3>Using let</h3>
-    <pre><code>let counter = 1;
+        <h3>Using let</h3>
+        <pre><code>let counter = 1;
     counter = 2; // Updating let variable
     console.log(counter); // Outputs: 2
     // let cannot be re-declared in the same scope
     // let counter = 3; // This would cause an error</code></pre>
-    <h3>Using const</h3>
-    <pre><code>const pi = 3.14;
+        <h3>Using const</h3>
+        <pre><code>const pi = 3.14;
     console.log(pi); // Outputs: 3.14
     // const must be initialized and cannot be re-assigned
     // pi = 1.59; // This would cause an error</code></pre>
-    <p>These examples show the typical use cases for <code>var</code>, <code>let</code>, and <code>const</code> in JavaScript, 
-        highlighting the importance of choosing the right type of variable based on the needs of your code.</p>    
-  </section>
-  <section>
-     <!-- Interactive example for practicing loop concepts -->
-    <h2>Try it Yourself</h2>
-    <p>Type your own greeting message and see it displayed below:</p>
-    <input type="text" id="greetingInput" placeholder="Type your greeting here...">
-    <button id="displayButton">Display Greeting</button>
-    <p id="greetingDisplay"></p>
-  </section>
-  <!-- Quiz section to test understanding of map concepts that uses javascript onclick function -->
-  <div class="quiz-container">
-    <h2>Test Your Knowledge: JavaScript Variables</h2>
-    <div id="question-container">
-        <p id="question">Which keyword declares a variable that cannot be reassigned?</p>
-        <ul>
-            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">var</label></li>
-            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">let</label></li>
-            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">const</label></li>
-        </ul>
-    </div>
-    <button onclick="checkAnswer('variables')">Submit Answer</button>
-    <p id="quiz-result"></p>
-</div>  
-</main>
-<footer>
-  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
-<!-- Footer containing copyright information and a practical back-to-top button that uses a javascript onclick funtion -->
-  <div class="back-to-top">
-    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-</div>
-</footer>
-<script src="../js/scripts.js"></script>
-</body>
+        <p>
+          These examples show the typical use cases for <code>var</code>,
+          <code>let</code>, and <code>const</code> in JavaScript, highlighting
+          the importance of choosing the right type of variable based on the
+          needs of your code.
+        </p>
+      </section>
+      <section>
+        <!-- Interactive example for practicing loop concepts -->
+        <h2>Try it Yourself</h2>
+        <p>Type your own greeting message and see it displayed below:</p>
+        <input
+          type="text"
+          id="greetingInput"
+          placeholder="Type your greeting here..."
+        />
+        <button id="displayButton">Display Greeting</button>
+        <p id="greetingDisplay"></p>
+      </section>
+      <!-- Quiz section to test understanding of map concepts that uses javascript onclick function -->
+      <div class="quiz-container">
+        <h2>Test Your Knowledge: JavaScript Variables</h2>
+        <div id="question-container">
+          <p id="question">
+            Which keyword declares a variable that cannot be reassigned?
+          </p>
+          <ul>
+            <li>
+              <input type="radio" name="answer" value="1" id="answer1" /><label
+                for="answer1"
+                >var</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="answer" value="2" id="answer2" /><label
+                for="answer2"
+                >let</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="answer" value="3" id="answer3" /><label
+                for="answer3"
+                >const</label
+              >
+            </li>
+          </ul>
+        </div>
+        <button onclick="checkAnswer('variables')">Submit Answer</button>
+        <p id="quiz-result"></p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+      <!-- Footer containing copyright information and a practical back-to-top button that uses a javascript onclick funtion -->
+      <div class="back-to-top">
+        <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+      </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>

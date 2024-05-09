@@ -4,108 +4,163 @@
     It provides examples of adding event listeners and handling events 
     using JavaScript and jQuery. -->
 
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JavaScript Events</title>
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-<header>
-  <h1>JavaScript Events</h1>
-  <nav>
-    <!-- NavBar for other pages -->
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="variables.html">Variables</a></li>
-      <li><a href="conditionals.html">Conditional Statements</a></li>
-      <li><a href="loops.html">Loops</a></li>
-      <li><a href="arrays.html">Arrays</a></li>
-      <li><a href="functions.html">Functions</a></li>
-      <li class="active"><a href="events.html">Events</a></li>
-      <li><a href="maps.html">Maps</a></li>
-      <li><a href="jquery.html">jQuery</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <section>
-    <h2>Understanding Events</h2>
-    <p>Events in JavaScript are actions or occurrences that happen in the system you are programming, which the 
-        system tells you about so you can respond to them in some way if desired. They are central to creating 
-        interactive web applications, such as clicking a button, entering text in a form, or moving the mouse over a link.</p>
-    <p>JavaScript can listen to these events and trigger functions as a response, known as event handlers. 
-        Here are some examples of how to work with events:</p>
-    <h3>Adding an Event Listener</h3>
-    <p>An event listener is a procedure in JavaScript that waits for an event to occur, like a click or a keypress. 
-        Here is how you can set up an event listener for a button click:</p>
-    <pre><code>const button = document.getElementById('myButton');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Events</h1>
+      <nav>
+        <!-- NavBar for other pages -->
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="variables.html">Variables</a></li>
+          <li><a href="conditionals.html">Conditional Statements</a></li>
+          <li><a href="loops.html">Loops</a></li>
+          <li><a href="arrays.html">Arrays</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li class="active"><a href="events.html">Events</a></li>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="jquery.html">jQuery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Understanding Events</h2>
+        <p>
+          Events in JavaScript are actions or occurrences that happen in the
+          system you are programming, which the system tells you about so you
+          can respond to them in some way if desired. They are central to
+          creating interactive web applications, such as clicking a button,
+          entering text in a form, or moving the mouse over a link.
+        </p>
+        <p>
+          JavaScript can listen to these events and trigger functions as a
+          response, known as event handlers. Here are some examples of how to
+          work with events:
+        </p>
+        <h3>Adding an Event Listener</h3>
+        <p>
+          An event listener is a procedure in JavaScript that waits for an event
+          to occur, like a click or a keypress. Here is how you can set up an
+          event listener for a button click:
+        </p>
+        <pre><code>const button = document.getElementById('myButton');
     button.addEventListener('click', function() {
         alert('Button clicked!');
     });</code></pre>
-    <h3>Event and Event Handler</h3>
-    <p>An event handler is a function that is triggered by an event. For example, you might want to handle a 
-        form submission to validate user input:</p>
-    <pre><code>const form = document.getElementById('myForm');
+        <h3>Event and Event Handler</h3>
+        <p>
+          An event handler is a function that is triggered by an event. For
+          example, you might want to handle a form submission to validate user
+          input:
+        </p>
+        <pre><code>const form = document.getElementById('myForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
         console.log('Form submitted!');
     });</code></pre>
-    <h3>Working with Different Event Types</h3>
-    <p>There are many types of events you can listen to in JavaScript. Here are a few common ones:</p>
-     <ul class="resource-list">
-        <li><code>click</code> — Triggered by clicking on an element.</li>
-        <li><code>mouseover</code> — Occurs when the mouse pointer is over an element.</li>
-        <li><code>mouseout</code> — Occurs when the mouse pointer leaves an element.</li>
-        <li><code>keydown</code> — Triggered when a key is pressed down.</li>
-        <li><code>load</code> — Fired when a resource has loaded.</li>
-    </ul>
-    <h3>Using Event Properties</h3>
-    <p>Events have properties that provide additional information about the event. For instance, the <code>keydown</code> event provides a 
-        property to determine which key was pressed:</p>
-    <pre><code>window.addEventListener('keydown', function(event) {
+        <h3>Working with Different Event Types</h3>
+        <p>
+          There are many types of events you can listen to in JavaScript. Here
+          are a few common ones:
+        </p>
+        <ul class="resource-list">
+          <li><code>click</code> — Triggered by clicking on an element.</li>
+          <li>
+            <code>mouseover</code> — Occurs when the mouse pointer is over an
+            element.
+          </li>
+          <li>
+            <code>mouseout</code> — Occurs when the mouse pointer leaves an
+            element.
+          </li>
+          <li><code>keydown</code> — Triggered when a key is pressed down.</li>
+          <li><code>load</code> — Fired when a resource has loaded.</li>
+        </ul>
+        <h3>Using Event Properties</h3>
+        <p>
+          Events have properties that provide additional information about the
+          event. For instance, the <code>keydown</code> event provides a
+          property to determine which key was pressed:
+        </p>
+        <pre><code>window.addEventListener('keydown', function(event) {
         console.log('Key pressed: ' + event.key);
     });</code></pre>
-    <p>Understanding and utilizing events effectively can significantly enhance the interactivity and functionality of your web applications.</p>    
-  </section>
-  <section id="eventsSection">
-    <h2>Try it Yourself</h2>
-    <div>
-      <p>Mouse over and out on the box below:</p>
-      <div id="eventBox" style="width: 100px; height: 100px; background-color: #00BFFF;"></div>
-    </div>
-    <div>
-      <p>Press any key:</p>
-      <input type="text" id="keyInput" placeholder="Click here and press a key">
-    </div>
-    <p id="eventOutput"></p>
-  </section>
-  <!-- Quiz with a onlick javascrtipt funtion-->
-  <div class="quiz-container">
-    <h2>Test Your Knowledge: JavaScript Events</h2>
-    <div id="question-container">
-        <p id="question">Which method is used to attach an event handler to a specified element?</p>
-        <ul>
-            <li><input type="radio" name="answer" value="1" id="answer1"><label for="answer1">getElementById()</label></li>
-            <li><input type="radio" name="answer" value="2" id="answer2"><label for="answer2">querySelect()</label></li>
-            <li><input type="radio" name="answer" value="3" id="answer3"><label for="answer3">addEventListener()</label></li>
-        </ul>
-    </div>
-    <button onclick="checkAnswer('events')">Submit Answer</button>
-    <p id="quiz-result"></p>
-</div>
-</main>
-<footer>
-  <p>&copy; 2024 JavaScript Refresher Tutorial</p>
-  <!-- back to top button with a onlick javascrtipt funtion-->
-  <div class="back-to-top">
-    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-</div>
-</footer>
-<script src="../js/scripts.js"></script>
-</body>
+        <p>
+          Understanding and utilizing events effectively can significantly
+          enhance the interactivity and functionality of your web applications.
+        </p>
+      </section>
+      <section id="eventsSection">
+        <h2>Try it Yourself</h2>
+        <div>
+          <p>Mouse over and out on the box below:</p>
+          <div
+            id="eventBox"
+            style="width: 100px; height: 100px; background-color: #00bfff"
+          ></div>
+        </div>
+        <div>
+          <p>Press any key:</p>
+          <input
+            type="text"
+            id="keyInput"
+            placeholder="Click here and press a key"
+          />
+        </div>
+        <p id="eventOutput"></p>
+      </section>
+      <!-- Quiz with a onlick javascrtipt funtion-->
+      <div class="quiz-container">
+        <h2>Test Your Knowledge: JavaScript Events</h2>
+        <div id="question-container">
+          <p id="question">
+            Which method is used to attach an event handler to a specified
+            element?
+          </p>
+          <ul>
+            <li>
+              <input type="radio" name="answer" value="1" id="answer1" /><label
+                for="answer1"
+                >getElementById()</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="answer" value="2" id="answer2" /><label
+                for="answer2"
+                >querySelect()</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="answer" value="3" id="answer3" /><label
+                for="answer3"
+                >addEventListener()</label
+              >
+            </li>
+          </ul>
+        </div>
+        <button onclick="checkAnswer('events')">Submit Answer</button>
+        <p id="quiz-result"></p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 JavaScript Refresher Tutorial</p>
+      <!-- back to top button with a onlick javascrtipt funtion-->
+      <div class="back-to-top">
+        <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+      </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>
