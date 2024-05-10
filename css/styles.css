@@ -22,31 +22,34 @@ body {
          1.5px  1.5px 0 #000; /* Black outline */
 }
 
-  /* Header styling using a background image with centered text */
-  header{
-    background-image: url('../images/stone.png'); /* Correct path */    
-    background-size: cover; 
-    background-position: center; 
+/* Header styling using a background image with centered text */
+header {
+    background-image: url('../images/stone.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: rgb(233, 217, 44);
-    padding: 1em 0 3em;
+    padding: 1em 0;
     text-align: center;
-    padding-left: 5px;
-    text-shadow: 
-    -1.5px -1.5px 0 #000,  
-     1.5px -1.5px 0 #000,
-    -1.5px  1.5px 0 #000,
-     1.5px  1.5px 0 #000; /* Black outline */
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000; /* Black outline */
+  }
+  
+  nav {
+    width: 100%; /* Full width */
   }
   
   nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow items to wrap in small screens */
   }
   
   nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 10px; /* Space between items */
   }
   
   nav ul li a {
@@ -58,6 +61,7 @@ body {
   main {
     margin: 1em 5%;
   }
+  
   
   /* Footer styling with flexbox for layout, and similar background and styling as header */
   footer {
